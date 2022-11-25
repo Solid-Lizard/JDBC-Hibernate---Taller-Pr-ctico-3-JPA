@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-configuration>
+	<session-factory>
+		<!--  CONFIGURACIÓN PARA MySQL  -->
+		<property name="connection.url">jdbc:mysql://localhost:3307/nttdataempresa?createDatabaseIfNotExist=true</property>  
+		<property name="hibernate.hbm2ddl.auto">create</property>  
+		<property name="connection.username">root</property>  
+		<property name="connection.password">manolo</property> 
+		 
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>  
+		<property name="hibernate.show_sql">false</property>  
+		  
+		<!--  MAPEOS  -->
+		<mapping class="com.persistence.Client"/>
+		<mapping class="com.persistence.Contract"/>
+		
+	</session-factory>
+</hibernate-configuration>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+
+	<!-- Appenders -->
+    <appender name="file" class="ch.qos.logback.core.FileAppender">
+        <file>./LOGS/logs.log</file> 
+
+        <encoder>
+            <pattern>[%d] - [%p] - [%c{1.}] - [%t]: %m%n</pattern>
+        </encoder>s
+        
+        <append>false</append>
+        
+    </appender>
+     
+    <appender name="consola" class="ch.qos.logback.core.ConsoleAppender">
+    	<encoder>
+    	<pattern>[%-5level] - [%thread] - %logger{0}: %msg%n</pattern>
+    	</encoder>
+    </appender>
+    
+    <!-- Logs -->
+    
+    <!-- 
+	    Ponemos el nivel del LOG por defecto de hibernate a "error", para evitar que
+	    salten los logs de hibernate y evitar la sobrecarga de LOGS 
+    -->
+    <logger name="org.hibernate" level="error"/>
+	
+    <root level="debug">
+        <appender-ref ref="consola"/>
+        <appender-ref ref="file"/>
+    </root>
+
+</configuration>

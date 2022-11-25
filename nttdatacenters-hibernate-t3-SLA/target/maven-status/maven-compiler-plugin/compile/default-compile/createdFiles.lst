@@ -1,0 +1,9 @@
+com\services\ClienteManagementServiceImpl.class
+com\persistence\CommonDAOImpl.class
+com\persistence\ClienteDAOI.class
+com\services\ClienteManagementServiceI.class
+com\persistence\Cliente.class
+com\services\SessionManager.class
+com\nttdata\main\App.class
+com\persistence\CommonDAOI.class
+com\persistence\ClienteDAOImpl.class
